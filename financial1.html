@@ -196,6 +196,17 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let buttons = document.querySelectorAll("button");
+    
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    alert("당신의 소중한 정보는 안타깝지만 버려졌습니다.");
+                });
+            });
+        });
+    </script>
 </body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
