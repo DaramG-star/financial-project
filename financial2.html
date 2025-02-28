@@ -105,7 +105,7 @@
     <div class="container">
         <h2>포트폴리오 수정</h2>
         <br>
-        <br>
+
         <div class="input-group">
             <label>회원 번호</label>
             <input type="text" value="1" readonly>
@@ -118,42 +118,42 @@
         <br>
         <div class="input-group">
             <label>Email</label>
-            <input type="email" placeholder="이메일을 입력하세요">
-        <button class="update-btn" onclick="showCustomMessage('Email')">Update</button>
+            <input type="email" id="email" placeholder="이메일을 입력하세요">
+            <button class="update-btn" onclick="showCustomMessage('Email')">Update</button>
         </div>
         <br>
         <div class="input-group">
             <label>닉네임</label>
-            <input type="text" placeholder="닉네임을 입력하세요">
+            <input type="text" id="nickname" placeholder="닉네임을 입력하세요">
             <button class="update-btn" onclick="showCustomMessage('닉네임')">Update</button>
         </div>
         <br>
         <div class="input-group">
             <label>나이</label>
-            <input type="number" placeholder="나이를 입력하세요">
+            <input type="number" id="age" placeholder="나이를 입력하세요">
             <button class="update-btn" onclick="showCustomMessage('나이')">Update</button>
         </div>
         <br>
         <div class="input-group">
             <label>자산</label>
-            <input type="text" placeholder="자산을 입력하세요">
+            <input type="text" id="assets" placeholder="자산을 입력하세요">
             <button class="update-btn" onclick="showCustomMessage('자산')">Update</button>
         </div>
         <br>
         <div class="input-group">
             <label>연봉</label>
-            <input type="text" placeholder="연봉을 입력하세요">
+            <input type="text" id="salary" placeholder="연봉을 입력하세요">
             <button class="update-btn" onclick="showCustomMessage('연봉')">Update</button>
         </div>
-
     </div>
+
     <script>
         function showCustomMessage(field) {
             let messages = {
                 "Email": "당신의 소중한 정보는 버려졌습니다.",
                 "닉네임": "좋지 않은 닉네임이라 거절하겠습니다.",
-                "나이": "나이가 많으시네요...",
-                "자산": "자산이 없으시네요...",
+                "나이": "나이가 많으시네요... 승인 거절입니다.",
+                "자산": "자산이 없으시네요... 승인 거절입니다.",
                 "연봉": "궁금하지 않습니다."
             };
             alert(messages[field]);
