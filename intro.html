@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김연주 포트폴리오</title>
+    <style>
+        * {
+            font-family: "Gowun Dodum", sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #e0f7fa;
+            color: #333;
+            text-align: center;
+        }
+
+        .navbar {
+            background: #0288d1;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 15px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background: #01579b;
+            transform: scale(1.1);
+        }
+
+        .header {
+            height: 350px;
+            background: linear-gradient(135deg, #4fc3f7, #0288d1);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+            border-bottom-left-radius: 50% 20%;
+            border-bottom-right-radius: 50% 20%;
+        }
+
+        .content-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        .active {
+            display: block;
+            opacity: 1;
+        }
+
+        footer {
+            background: #0288d1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 400;
+            font-family: "Gowun Dodum", sans-serif;
+        }
+
+        strong {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Gowun Dodum", sans-serif;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a onclick="showSection('intro')">자기소개</a>
+        <a onclick="showSection('skills')">기술 스택</a>
+        <a onclick="showSection('project')">프로젝트</a>
+        <a onclick="showSection('contact')">연락처</a>
+    </nav>
+
+    <header class="header">김연주의 개발 포트폴리오</header>
+
+    <main>
+        <section id="intro" class="content-section active">
+            <h1> 🐿️ 자기소개 🐿️ </h1>
+            <br>
+            <img src="sqr.jpg" width="300">
+            <br>
+            <br>
+            <p>안녕하세요! 데이터와 코드로 가치를 만드는 <strong>김연주</strong>입니다.</p>
+            <br>
+            <p><strong>데이터 분석</strong>, <strong>머신러닝 모델 개발</strong>에 관심이 많으며,</p>
+            <p>금융과 보험 데이터를 연구하고 있습니다.</p>
+            <br>
+            <p>기업 부도 예측 연구로 논문을 발표했으며, <br>신용 평가 모델 개발 경험을 바탕으로 더 나은 금융 서비스를 고민합니다.</p>
+        </section>
+
+        <section id="skills" class="content-section">
+            <h1>기술 스택</h1>
+            <br>
+            <ul>
+                <li><strong>데이터 분석</strong>: Pandas, NumPy, Scikit-learn, TensorFlow</li>
+                <br>
+                <li><strong>데이터베이스</strong>: MySQL, PostgreSQL</li>
+                <br>
+                <li><strong>시각화</strong>: Matplotlib, Seaborn, Tableau</li>
+                <br>
+                <li><strong>클라우드 & 배포</strong>: AWS, Docker</li>
+            </ul>
+        </section>
+
+        <section id="project" class="content-section">
+            <h1>프로젝트</h1>
+            <br>
+            <h3>📊 기업 부도 예측 모델</h3>
+            <br>
+            <p>금융 데이터를 활용하여 기업 부도를 예측하는 머신러닝 모델을 개발</p>
+            <p><strong>사용 기술:</strong> Python, Scikit-learn, XGBoost, Propensity Score Matching</p>
+            <p><strong>성과:</strong> 기존 모델 대비 F1-score 10% 향상</p>
+            <br>
+            <h3>💰 신용 평가 모델 개발</h3>
+            <br>
+            <p>비금융 데이터를 활용한 대안 신용평가 모델 개발</p>
+            <p><strong>사용 기술:</strong> TensorFlow, Flask, MySQL</p>
+            <p><strong>성과:</strong> 금융사 POC 진행, 고객 리스크 분석 자동화</p>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h1>연락처</h1>
+            <br>
+            <p>📧 이메일: <a href="mailto:sukrladuswn@naver.com">sukrladuswn@naver.com</a></p>
+            <br>
+            <p>🔗 GitHub: <a href="https://github.com/DaramG-star" target="_blank">github.com/DaramG-star</a></p>
+            <br>
+            <p>💼 LinkedIn: <a href="https://n.news.naver.com/mnews/article/001/0004734588?sid=102" target="_blank">엄청난 저의 프로필을 소개합니다</a></p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 김연주. 모든 권리 보유.
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+                section.style.opacity = 0;
+            });
+
+            const activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+            setTimeout(() => activeSection.style.opacity = 1, 100); 
+        }
+    </script>
+</body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle&family=Gowun+Dodum&display=swap" rel="stylesheet">
+</html>
