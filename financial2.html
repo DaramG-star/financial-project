@@ -146,6 +146,18 @@
             <button class="update-btn">Update</button>
         </div>
     </div>
+    <script>
+        function showCustomMessage(field) {
+            let messages = {
+                "Email": "당신의 소중한 정보는 버려졌습니다.",
+                "닉네임": "좋지 않은 닉네임이라 거절하겠습니다.",
+                "나이": "나이가 많으시네요...",
+                "자산": "자산이 없으시네요...",
+                "연봉": "궁금하지 않습니다."
+            };
+            alert(messages[field]);
+        }
+    </script>
 </body>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
